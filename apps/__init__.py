@@ -30,12 +30,10 @@ def create_app(config):
     from .auth import auth_app
     from .landing import landing_app
     from .admin import admin_app
-    from .employee import employee_app
 
     admin_app.init_app(app)
     app.register_blueprint(auth_app)
     app.register_blueprint(landing_app)
-    app.register_blueprint(employee_app)
 
     return app
 

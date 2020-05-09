@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="იცნობდე შენს თანამშრომელს">
-    <title>იცნობდე შენს თანამშრომელს - შიდა კონტროლის დეპარტამენტი</title>
+    <meta name="description" content="Login page">
+    <title>Login - Flask default server</title>
     <link rel="stylesheet" type="text/css" href="{{url_for('auth.static', filename='css/login.css')}}">
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/bootstrap/bootstrap.min.css')}}">
 </head>
 <body>
 <div class="sectionLandingPage container">
     <div class="headlineLandingPage">
-        <h1 class="headTitleLandingPage">იცნობდე შენს თანამშრომელს</h1>
+        <h1 class="headTitleLandingPage">Login </h1>
     </div>
     <img alt="Landing Page" src="{{url_for('auth.static', filename='images/incidentLanding.png')}}"
          class="landingImage">
@@ -18,18 +18,18 @@
         {{ form.csrf_token() }}
         <div class="inputText usernameInput form-group">
             <label for="email"></label>
-            <input name="email" placeholder="იუზერი" type="text" id="email"
+            <input name="email" placeholder="Email" type="email" id="email"
                    class="form-control form-control-md" value=""></div>
         <div class="inputText passwordForm form-group">
             <label for="loginPasswordInput"></label>
-            <input name="password" placeholder="პაროლი" type="password"
+            <input name="password" placeholder="password" type="password"
                    id="loginPasswordInput" class="form-control">
             <button type="button" class="passwordShowToggle btn-outline-warning btn-sm"
-                    id="toggleShowPassword"> ჩვენება
+                    id="toggleShowPassword"> Show
             </button>
         </div>
         <div class="inputText form-group">
-            <button type="submit" class="inputText btn btn-outline-warning btn-block"> შესვლა</button>
+            <button type="submit" class="inputText btn btn-outline-warning btn-block"> Login</button>
         </div>
     </form>
 </div>

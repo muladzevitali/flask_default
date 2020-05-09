@@ -16,6 +16,8 @@ def create_users(user_model, role_model, db):
         user.manager_id = user_meta["manager_id"]
         user.email = user_meta["email"]
         user.username = user_meta["email"].split("@")[0]
+        user.password = user.hash_password(user_meta['password'])
+
         if user_meta.get('is_admin', False):
             user.roles.append(admin_role)
         db.session.add(user)

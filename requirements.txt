@@ -4,4 +4,7 @@ flask_migrate
 flask_login
 flask_sqlalchemy
 flask_admin
-cx_Oracle
+flask_wtf
+flask_security
+wtforms
+email_validator

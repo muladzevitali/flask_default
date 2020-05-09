@@ -1,10 +1,10 @@
 const toggleShowPassword = () => {
     let currentText = document.getElementById("toggleShowPassword").innerText;
     if (currentText === 'ჩვენება') {
-        document.getElementById("toggleShowPassword").innerText = 'დამალვა';
+        document.getElementById("toggleShowPassword").innerText = 'Hide';
         document.getElementById("loginPasswordInput").type = 'text';
     } else {
-        document.getElementById("toggleShowPassword").innerText = 'ჩვენება';
+        document.getElementById("toggleShowPassword").innerText = 'Show';
         document.getElementById("loginPasswordInput").type = 'password'
     }
 };

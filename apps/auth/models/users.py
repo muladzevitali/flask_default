@@ -1,4 +1,5 @@
 from datetime import timedelta
+from hashlib import sha256
 from typing import (List, Optional)
 
 from flask_login import (AnonymousUserMixin, login_user, logout_user)
@@ -18,6 +19,7 @@ class User(db.Model, UserMixin):
     active = db.Column(db.Boolean(), default=True)
     username = db.Column(db.String(50))
     email = db.Column(db.String(50), unique=True)
+    password = db.Column(db.String(64), nullable=False)
     first_name = db.Column(db.String(50))
     last_name = db.Column(db.String(50))
     manager_id = db.Column(db.Integer, db.ForeignKey(f'{table_prefix}_users.id'))
@@ -25,13 +27,22 @@ class User(db.Model, UserMixin):
     roles = db.relationship('Role', secondary=f'{table_prefix}_users_roles_rel',
                             backref=db.backref(f'{table_prefix}_users.user_id'), lazy='dynamic')
 
-    def create_user(self, username, first_name, last_name, email):
+    def create_user(self, username: str, first_name: str, last_name: str, email: str, password: str):
+        """Create user and insert into database"""
         self.username = username
         self.first_name = first_name
         self.last_name = last_name
         self.email = email
+        self.password = self.hash_password(password)
+
         db.session.add(self)
         db.session.commit()
+
+    @staticmethod
+    def hash_password(password: str) -> hex:
+        """Password hashing handler"""
+
+        return sha256(password.encode()).hexdigest()
 
     def __repr__(self):
         return '%s' % self.username

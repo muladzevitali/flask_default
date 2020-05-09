@@ -1,348 +1,79 @@
-{% extends 'landing_base.html' %}
-{% block title %}საწყისი გვერდი {% endblock %}
-{% block main_container %}
-<main class='main-content bgc-grey-100'>
-    <div id='mainContent'>
-        <div class="row gap-20 masonry pos-r">
-            <div class="masonry-sizer col-md-6"></div>
-            <!-- მომხმარებლებისა და თანამშრომლების რაოდენობა ==================== -->
-            <div class="masonry-item  w-100">
-                <div class="row gap-20">
-                    <div class='col-md-6'>
-                        <div class="layers bd bgc-white p-20">
-                            <div class="layer w-100 mB-10">
-                                <h6 class="lh-1">თანამშრომლების რაოდენობა</h6>
-                            </div>
-                            <div class="layer w-100">
-                                <div class="peers ai-sb fxw-nw">
-                                    <div class="peer peer-greed">
-                                        <span id="sparklinedash"></span>
-                                    </div>
-                                    <div class="peer">
-                                        <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-green-50 c-green-500">4</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='col-md-6'>
-                        <div class="layers bd bgc-white p-20">
-                            <div class="layer w-100 mB-10">
-                                <h6 class="lh-1">მომხმარებლების რაოდენობა</h6>
-                            </div>
-                            <div class="layer w-100">
-                                <div class="peers ai-sb fxw-nw">
-                                    <div class="peer peer-greed">
-                                        <span id="sparklinedash2"></span>
-                                    </div>
-                                    <div class="peer">
-                                        <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-15 pY-15 bgc-red-50 c-red-500">7</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--ჩარტები-->
-            <div class="masonry-item col-md-6">
-                <!-- #Monthly Stats ==================== -->
-                <div class="bd bgc-white">
-                    <div class="layers">
-                        <div class="layer w-100 pX-20 pT-20">
-                            <h6 class="lh-1">Monthly Stats</h6>
-                        </div>
-                        <div class="layer w-100 p-20">
-                            <canvas id="line-chart" height="220"></canvas>
-                        </div>
-                        <div class="layer bdT p-20 w-100">
-                            <div class="peers ai-c jc-c gapX-20">
-                                <div class="peer">
-                                            <span class="fsz-def fw-600 mR-10 c-grey-800">10% <i
-                                                    class="fa fa-level-up c-green-500"></i></span>
-                                    <small class="c-grey-500 fw-600">APPL</small>
-                                </div>
-                                <div class="peer fw-600">
-                                            <span class="fsz-def fw-600 mR-10 c-grey-800">2% <i
-                                                    class="fa fa-level-down c-red-500"></i></span>
-                                    <small class="c-grey-500 fw-600">Average</small>
-                                </div>
-                                <div class="peer fw-600">
-                                            <span class="fsz-def fw-600 mR-10 c-grey-800">15% <i
-                                                    class="fa fa-level-up c-green-500"></i></span>
-                                    <small class="c-grey-500 fw-600">Sales</small>
-                                </div>
-                                <div class="peer fw-600">
-                                            <span class="fsz-def fw-600 mR-10 c-grey-800">8% <i
-                                                    class="fa fa-level-down c-red-500"></i></span>
-                                    <small class="c-grey-500 fw-600">Profit</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="masonry-item col-md-6">
-                <div class="bgc-white p-20 bd"><h6 class="c-grey-900">Easy Pie Charts</h6>
-                    <div class="mT-30">
-                        <div class="peers mT-20 fxw-nw@lg+ jc-sb ta-c gap-10">
-                            <div class="peer">
-                                <div class="easy-pie-chart" data-size="80" data-percent="75" data-bar-color="#f44336">
-                                    <span>75 %</span>
-                                    <canvas height="120" width="120" style="height: 80px; width: 80px;"></canvas>
-                                </div>
-                                <h6 class="fsz-sm">New Users</h6></div>
-                            <div class="peer">
-                                <div class="easy-pie-chart" data-size="80" data-percent="50" data-bar-color="#2196f3">
-                                    <span>50 %</span>
-                                    <canvas height="120" width="120" style="height: 80px; width: 80px;"></canvas>
-                                </div>
-                                <h6 class="fsz-sm">New Purchases</h6></div>
-                            <div class="peer">
-                                <div class="easy-pie-chart" data-size="80" data-percent="65" data-bar-color="#f44336">
-                                    <span>65 %</span>
-                                    <canvas height="120" width="120" style="height: 80px; width: 80px;"></canvas>
-                                </div>
-                                <h6 class="fsz-sm">New Customers</h6></div>
-                            <div class="peer">
-                                <div class="easy-pie-chart" data-size="80" data-percent="90" data-bar-color="#ff9800">
-                                    <span>90 %</span>
-                                    <canvas height="120" width="120" style="height: 80px; width: 80px;"></canvas>
-                                </div>
-                                <h6 class="fsz-sm">Bounce Rate</h6></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- #Sales Report ==================== -->
-            <div class="masonry-item col-md-6">
-                <!-- #Weather ==================== -->
-                <div class="bd bgc-white p-20">
-                    <div class="layers">
-                        <!-- Widget Title -->
-                        <div class="layer w-100 mB-20">
-                            <h6 class="lh-1">Weather</h6>
-                        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home - Flask server</title>
+    <link type="text/html" href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <link type="text/html" href="{{ url_for('static', filename='css/bootstrap/bootstrap.css') }}" rel="stylesheet">
 
-                        <!-- Today Weather -->
-                        <div class="layer w-100">
-                            <div class="peers ai-c jc-sb fxw-nw">
+</head>
+<body class="app">
+
+<div>
+    <div class="sidebar">
+        <div class="sidebar-inner">
+            <div class="sidebar-logo">
+                <div class="peers ai-c fxw-nw">
+                    <div class="peer peer-greed">
+                        <a class="sidebar-link td-n" href="/">
+                            <div class="peers ai-c fxw-nw">
+                                <div class="peer">
+                                    <div class="pt-3 pl-2 logo">
+                                        <img src="{{ url_for('static', filename='images/logo-mini.png') }}" alt="logo"
+                                             style='width: 50px; height: 40px'>
+                                    </div>
+                                </div>
                                 <div class="peer peer-greed">
-                                    <div class="layers">
-                                        <!-- Temprature -->
-                                        <div class="layer w-100">
-                                            <div class="peers fxw-nw ai-c">
-                                                <div class="peer mR-20">
-                                                    <h3>32<sup>°F</sup></h3>
-                                                </div>
-                                                <div class="peer">
-                                                    <canvas class="sleet" width="44" height="44"></canvas>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Condition -->
-                                        <div class="layer w-100">
-                                            <span class="fw-600 c-grey-600">Partly Clouds</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="peer">
-                                    <div class="layers ai-fe">
-                                        <div class="layer">
-                                            <h5 class="mB-5">Monday</h5>
-                                        </div>
-                                        <div class="layer">
-                                            <span class="fw-600 c-grey-600">Nov, 01 2017</span>
-                                        </div>
-                                    </div>
+                                    <h5 class="lh-1 mB-0 logo-text">Flask_server</h5>
                                 </div>
                             </div>
-                        </div>
-
-                        <!-- Today Weather Extended -->
-                        <div class="layer w-100 mY-30">
-                            <div class="layers bdB">
-                                <div class="layer w-100 bdT pY-5">
-                                    <div class="peers ai-c jc-sb fxw-nw">
-                                        <div class="peer">
-                                            <span>Wind</span>
-                                        </div>
-                                        <div class="peer ta-r">
-                                            <span class="fw-600 c-grey-800">10km/h</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="layer w-100 bdT pY-5">
-                                    <div class="peers ai-c jc-sb fxw-nw">
-                                        <div class="peer">
-                                            <span>Sunrise</span>
-                                        </div>
-                                        <div class="peer ta-r">
-                                            <span class="fw-600 c-grey-800">05:00 AM</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="layer w-100 bdT pY-5">
-                                    <div class="peers ai-c jc-sb fxw-nw">
-                                        <div class="peer">
-                                            <span>Pressure</span>
-                                        </div>
-                                        <div class="peer ta-r">
-                                            <span class="fw-600 c-grey-800">1B</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Week Forecast -->
-                        <div class="layer w-100">
-                            <div class="peers peers-greed ai-fs ta-c">
-                                <div class="peer">
-                                    <h6 class="mB-10">MON</h6>
-                                    <canvas class="sleet" width="30" height="30"></canvas>
-                                    <span class="d-b fw-600">32<sup>°F</sup></span>
-                                </div>
-                                <div class="peer">
-                                    <h6 class="mB-10">TUE</h6>
-                                    <canvas class="clear-day" width="30" height="30"></canvas>
-                                    <span class="d-b fw-600">30<sup>°F</sup></span>
-                                </div>
-                                <div class="peer">
-                                    <h6 class="mB-10">WED</h6>
-                                    <canvas class="partly-cloudy-day" width="30" height="30"></canvas>
-                                    <span class="d-b fw-600">28<sup>°F</sup></span>
-                                </div>
-                                <div class="peer">
-                                    <h6 class="mB-10">THR</h6>
-                                    <canvas class="cloudy" width="30" height="30"></canvas>
-                                    <span class="d-b fw-600">32<sup>°F</sup></span>
-                                </div>
-                                <div class="peer">
-                                    <h6 class="mB-10">FRI</h6>
-                                    <canvas class="snow" width="30" height="30"></canvas>
-                                    <span class="d-b fw-600">24<sup>°F</sup></span>
-                                </div>
-                                <div class="peer">
-                                    <h6 class="mB-10">SAT</h6>
-                                    <canvas class="wind" width="30" height="30"></canvas>
-                                    <span class="d-b fw-600">28<sup>°F</sup></span>
-                                </div>
-                                <div class="peer">
-                                    <h6 class="mB-10">SUN</h6>
-                                    <canvas class="sleet" width="30" height="30"></canvas>
-                                    <span class="d-b fw-600">32<sup>°F</sup></span>
-                                </div>
-                            </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="masonry-item col-md-6">
-                <!-- #Chat ==================== -->
-                <div class="bd bgc-white">
-                    <div class="layers">
-                        <div class="layer w-100 p-20">
-                            <h6 class="lh-1">Quick Chat</h6>
-                        </div>
-                        <div class="layer w-100">
-                            <!-- Chat Box -->
-                            <div class="bgc-grey-200 p-20 gapY-15">
-                                <!-- Chat Conversation -->
-                                <div class="peers fxw-nw">
-                                    <div class="peer mR-20">
-                                        <img class="w-2r bdrs-50p"
-                                             src="https://randomuser.me/api/portraits/men/11.jpg" alt="">
-                                    </div>
-                                    <div class="peer peer-greed">
-                                        <div class="layers ai-fs gapY-5">
-                                            <div class="layer">
-                                                <div class="peers fxw-nw ai-c pY-3 pX-10 bgc-white bdrs-2 lh-3/2">
-                                                    <div class="peer mR-10">
-                                                        <small>10:00 AM</small>
-                                                    </div>
-                                                    <div class="peer-greed">
-                                                        <span>Lorem Ipsum is simply dummy text of</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="layer">
-                                                <div class="peers fxw-nw ai-c pY-3 pX-10 bgc-white bdrs-2 lh-3/2">
-                                                    <div class="peer mR-10">
-                                                        <small>10:00 AM</small>
-                                                    </div>
-                                                    <div class="peer-greed">
-                                                        <span>the printing and typesetting industry.</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="layer">
-                                                <div class="peers fxw-nw ai-c pY-3 pX-10 bgc-white bdrs-2 lh-3/2">
-                                                    <div class="peer mR-10">
-                                                        <small>10:00 AM</small>
-                                                    </div>
-                                                    <div class="peer-greed">
-                                                        <span>Lorem Ipsum has been the industry's</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <!-- Chat Conversation -->
-                                <div class="peers fxw-nw ai-fe">
-                                    <div class="peer ord-1 mL-20">
-                                        <img class="w-2r bdrs-50p"
-                                             src="https://randomuser.me/api/portraits/men/12.jpg" alt="">
-                                    </div>
-                                    <div class="peer peer-greed ord-0">
-                                        <div class="layers ai-fe gapY-10">
-                                            <div class="layer">
-                                                <div class="peers fxw-nw ai-c pY-3 pX-10 bgc-white bdrs-2 lh-3/2">
-                                                    <div class="peer mL-10 ord-1">
-                                                        <small>10:00 AM</small>
-                                                    </div>
-                                                    <div class="peer-greed ord-0">
-                                                        <span>Heloo</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="layer">
-                                                <div class="peers fxw-nw ai-c pY-3 pX-10 bgc-white bdrs-2 lh-3/2">
-                                                    <div class="peer mL-10 ord-1">
-                                                        <small>10:00 AM</small>
-                                                    </div>
-                                                    <div class="peer-greed ord-0">
-                                                        <span>??</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+        </div>
+    </div>
+    <!-- Main ============================ -->
+    <div class="page-container">
+        <!-- ### $Topbar ### -->
+        <div class="header navbar">
+            <div class="header-container">
+                <ul class="nav-right">
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle no-after peers fxw-nw ai-c lh-1" data-toggle="dropdown">
+                            <div class="peer mR-10">
+                                <img class="w-2r bdrs-50p"
+                                     src="https://randomuser.me/api/portraits/men/1.jpg" alt="">
                             </div>
-                            <!-- Chat Send -->
-                            <div class="p-20 bdT bgc-white">
-                                <div class="pos-r">
-                                    <label>
-                                        <input type="text" class="form-control bdrs-10em m-0"
-                                               placeholder="Say something...">
-                                    </label>
-                                    <button type="button"
-                                            class="btn btn-primary bdrs-50p w-2r p-0 h-2r pos-a r-1 t-1">
-                                        <i class="fa fa-paper-plane-o"></i>
-                                    </button>
-                                </div>
+                            <div class="peer">
+                                <span class="fsz-sm c-grey-900">{{ user.username }}</span>
                             </div>
-                        </div>
-                    </div>
-                </div>
+                        </a>
+                        <ul class="dropdown-menu fsz-sm">
+                            <li>
+                                <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+                                    <i class="ti-user mR-10"></i>
+                                    <span>Settings</span>
+                                </a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="{{ url_for('auth.logout') }}" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+                                    <i class="ti-power-off mR-10"></i>
+                                    <span>Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
 
+
+        <footer class="bdT ta-c p-30 lh-0 fsz-sm c-grey-600">
+            <span>Copyright © 2019. All rights reserved.</span>
+        </footer>
     </div>
-    </div>
-</main>
-{% endblock %}
+</div>
+</body>
+</html>
