@@ -30,7 +30,7 @@ def reset_db():
 
 @manager.command
 def runserver():
-    application.run(host='0.0.0.0', port='8080', debug=False)
+    application.run(host='0.0.0.0', port='8080', debug=True)
 
 
 if __name__ == '__main__':

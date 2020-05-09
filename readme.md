@@ -1,4 +1,4 @@
-# FLASK Minimal Application
+# Minimal Flask Application
 > Application includes: Login and Landing pages.
 
 ## Introduction
@@ -10,7 +10,7 @@ The flask application has already installed 3 apps as blueprints:
 
 Application uses SQLite as database. If you want to change it, modify the uri variable in [config file](src/config/config_parser.py) ApplicationDatabase class.
 Server runs on port 8080 as default. You can change it in manage.py file.
-
+For running server in a production mode use the [readme](https://github.com/muladzevitali/faiss_server).
 
 ## Installation
 For installing dependencies run:
