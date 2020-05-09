@@ -1,0 +1,120 @@
+[
+  {
+    "email": "gsanaia@bog.ge",
+    "first_name": "Giorgi",
+    "last_name": "Sanaia",
+    "manager_id": null,
+    "id": 1,
+    "is_admin": true
+  },
+  {
+    "email": "sjapharidze@bog.ge",
+    "first_name": "Sergi",
+    "last_name": "Japharidze",
+    "manager_id": 1,
+    "id": 2,
+    "is_admin": true
+  },
+  {
+    "email": "l.sikharulidze@bog.ge",
+    "first_name": "Lasha",
+    "last_name": "Sikharulidze",
+    "manager_id": 1,
+    "id": 3
+  },
+  {
+    "email": "tgigauri@bog.ge",
+    "first_name": "Teona",
+    "last_name": "Gigauri",
+    "manager_id": 1,
+    "id": 4,
+    "is_admin": true
+  },
+  {
+    "email": "nbichinashvili@bog.ge",
+    "first_name": "Natia",
+    "last_name": "Bichinashvili",
+    "manager_id": 3,
+    "id": 10
+  },
+  {
+    "email": "dkodanashvili@bog.ge",
+    "first_name": "Davit",
+    "last_name": "Kodanashvili",
+    "manager_id": 3,
+    "id": 11
+  },
+  {
+    "email": "vmuladze@bog.ge",
+    "first_name": "Vitali",
+    "last_name": "Muladze",
+    "manager_id": 2,
+    "id": 5,
+    "is_admin": true
+  },
+  {
+    "email": "kivaniadze@bog.ge",
+    "first_name": "Koka",
+    "last_name": "Ivaniadze",
+    "manager_id": 3,
+    "id": 6
+  },
+  {
+    "email": "bachukichakvetadze@bog.ge",
+    "first_name": "Bachuki",
+    "last_name": "Chakvetadze",
+    "manager_id": 6,
+    "id": 7
+  },
+  {
+    "email": "globzhanidze@bog.ge",
+    "first_name": "Giorgi",
+    "last_name": "Lobzhanidze",
+    "manager_id": 6,
+    "id": 8
+  },
+  {
+    "email": "dgogsadze@bog.ge",
+    "first_name": "Davit",
+    "last_name": "Gogsadze",
+    "manager_id": 11,
+    "id": 12
+  },
+  {
+    "email": "n.nadiradze@bog.ge",
+    "first_name": "Nino",
+    "last_name": "Nadiradze",
+    "manager_id": 6,
+    "id": 9
+  },
+  {
+    "email": "nchedia@bog.ge",
+    "first_name": "Natia",
+    "last_name": "Chedia",
+    "manager_id": 10,
+    "id": 13
+  },
+  {
+    "email": "sjincharadze@bog.ge",
+    "first_name": "Sopho",
+    "last_name": "Jincharadze",
+    "manager_id": 10,
+    "id": 14
+  },
+  {
+    "email": "m.supatashvili@bog.ge",
+    "first_name": "Mari",
+    "last_name": "Supatashvili",
+    "manager_id": 2,
+    "id": 15,
+    "is_admin": true
+  },
+  {
+    "email": "tmkheidze@bog.ge",
+    "first_name": "Teona",
+    "last_name": "Mkheidze",
+    "manager_id": 2,
+    "id": 16,
+    "is_admin": true
+  }
+]

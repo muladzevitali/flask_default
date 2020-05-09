@@ -1,0 +1,55 @@
+
+.Login {
+    padding: 12px 0;
+}
+
+.sectionLandingPage {
+    margin-top: 10%
+}
+
+.inputText {
+    width: 50%;
+}
+
+.Login form {
+    max-width: 320px;
+}
+
+.usernameInput {
+    margin-bottom: -2% !important;
+}
+
+.passwordForm {
+    position: relative;
+}
+
+.passwordShowToggle {
+    position: absolute;
+    right: 4%;
+    top: 51%;
+    border: 2px;
+    font-size: 0.575rem !important;
+    background: #ededed;
+    border-radius: 3px;
+    padding: 10px;
+    transition: all .2s;
+}
+
+.loginErrorMessage {
+    color: red;
+    padding-top: 1%;
+    font-family: "# Dumbadze", serif;
+}
+
+.landingImage {
+    z-index: -1;
+    width: 400px;
+    position: absolute;
+    right: 15%;
+}
+
+.headTitleLandingPage {
+    position: relative;
+    width: 44%;
+    font-family: "# Dumbadze", serif;
+}
