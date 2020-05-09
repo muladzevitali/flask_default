@@ -15,11 +15,22 @@ manager.add_command('db', MigrateCommand)
 
 
 @manager.command
-def reset_database():
+def create_db():
     with application.app_context():
-        db.metadata.drop_all(db.engine, tables=tables)
         db.metadata.create_all(db.engine, tables=tables)
         create_users(User, Role, db)
+
+
+@manager.command
+def reset_db():
+    with application.app_context():
+        db.metadata.drop_all(db.engine, tables=tables)
+        create_db()
+
+
+@manager.command
+def runserver():
+    application.run(host='0.0.0.0', port='8080', debug=False)
 
 
 if __name__ == '__main__':
