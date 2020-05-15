@@ -1,6 +1,6 @@
 const toggleShowPassword = () => {
     let currentText = document.getElementById("toggleShowPassword").innerText;
-    if (currentText === 'ჩვენება') {
+    if (currentText === 'Show') {
         document.getElementById("toggleShowPassword").innerText = 'Hide';
         document.getElementById("loginPasswordInput").type = 'text';
     } else {
